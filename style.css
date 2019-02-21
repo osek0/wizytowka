@@ -1,0 +1,87 @@
+:root{
+    --fioletowy: #564787;
+    --kremowy: #DBCBD8;
+    --bialy: #F2FDFF;
+    --blekitny: #9AD4D6;
+    --niebieski: #101935;
+}
+body{
+    background-color: var(--bialy);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "header header header"
+    "navBar navBar navBar"
+    ". naszaOferta ."
+    ". oNas ."
+    ". galeria ."
+    ". daneKontaktowe ."
+    "footer footer footer";
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px, 30px;
+    height: 100px;
+    color: var(--bialy);
+    background: linear-gradient(to right, rgb(73, 73, 73),rgb(119, 119, 119));
+}
+.item{
+    justify-self: center;
+    margin: auto;
+}
+.titleBar{
+    height: 100vh;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background: url("paper-bag.jpg") no-repeat right top fixed;
+    background-size: 100vw;
+}
+.titleBar>h1{
+    color: #99927e;
+    margin-top: 15vh;
+    font-family: 'Lobster', cursive;
+    font-size: 300px;
+}
+#navBar{
+    grid-area: navBar;
+    display: grid;
+    grid-template-columns: 5fr repeat(4, 1fr);
+    background: linear-gradient(to right, rgb(73, 73, 73),rgb(119, 119, 119));
+    height: 5vh;
+    width: 100vw;
+    align-content: center;
+    position: fixed;
+    top: 0px;
+}
+#oNas{
+    grid-area: oNas;
+}
+#naszaOferta{
+    grid-area: naszaOferta;
+}
+#galeria{
+    grid-area: galeria;
+}
+#daneKontaktowe{
+    grid-area: daneKontaktowe;
+}
+.container{
+    display: grid;
+    grid-template-rows: 1fr, 1fr, auto;
+    justify-items: center;
+}
+.item>a{
+    text-decoration: none;
+    color: whitesmoke;
+}
