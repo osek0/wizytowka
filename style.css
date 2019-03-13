@@ -1,5 +1,7 @@
 :root{
-    --szary: linear-gradient(to right, rgb(66, 66, 66),rgb(165, 165, 165));
+    --grey-one: rgba(99, 99, 99, 0.219);
+    --grey-two: rgba(105, 105, 105, 0.212);
+    --grey-three: rgba(163, 163, 163, 0.212);
 }
 body{
     padding: 0;
@@ -9,13 +11,15 @@ body{
     scroll-behavior: smooth;
 }
 footer{
-    grid-area: footer;
+    background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
+    background-position: center center, bottom left;
+    background-attachment: scroll, fixed; 
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 20px, 30px;
     height: 100px;
     color: white;
-    background: var(--szary);
 }
 .item{
     justify-self: center;
@@ -46,7 +50,6 @@ footer{
     font-size: 30px;
 }
 #navBar{
-    grid-area: navBar;
     display: grid;
     grid-template-columns: 2fr repeat(4, 1fr);
     background: rgba(56, 56, 56, 0.24);
@@ -62,33 +65,24 @@ footer{
     margin-left: 5vw;
 }
 .container{
-        display:grid;
-    grid-template-columns: 1fr 1fr;
+    display:grid;
     grid-template-rows: 1fr auto;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
-#oNas{
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 40% 60%;
-}
-#oNas img{
-    width: 100%;
-    margin: auto;
-}
-
 #naszaOferta{
-    background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
-    background-position: center center, bottom left;
-    background-attachment: scroll, fixed; 
-    background-size: cover;
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
     align-items: center;
     justify-items: center;
+}
+#naszaOferta, #katalogi{
     color: whitesmoke;
+    background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
+    background-position: center center, bottom left;
+    background-attachment: scroll, fixed; 
+    background-size: cover;
 }
 .titles{
     margin: 0;
@@ -96,14 +90,20 @@ footer{
     justify-items: center;
     grid-column: 1 / span 2;
 }
+#naszaOferta .titles{
+    grid-column: 1 / span 2;
+}
+
 .content{
-    padding: 0 2vw ;
+    padding: 0 15vw 2vh;
+    text-align: center;
 }
 .produkt{
     box-sizing: border-box;
     padding: 1vw 0;
     margin: 2vw;
-    border: solid 5px rgba(221, 221, 221, 0.212);
+    border: solid 5px var(--grey-two);
+    background-color: var(--grey-one);
     border-radius: 10px;
     display:grid;
     font-size: 100px;
@@ -114,15 +114,31 @@ footer{
     margin:2px;
     font-size: 20px;
 }
-.produkt:hover{
-    background-color: rgba(163, 163, 163, 0.212);
-    transition: background-color 1s ease-in ;
+.download{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 2vh;
 }
-#naszaOferta a{
-    text-decoration: none;
-    color: whitesmoke;
+.download-item{
+    display: flex;
+    border: solid 5px var(--grey-two);
+    background-color: var(--grey-one);
+    border-radius: 10px;
+    margin: 1vh;
+    width: 15vw;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
 }
-.item>a{
+.download-item i{
+    margin-right: 10px;
+}
+.produkt:hover, .download-item:hover{
+    background-color: var(--grey-three);
+    transition: background-color 0.5s ease-in ;
+}
+a{
     text-decoration: none;
     color: whitesmoke;
 }
