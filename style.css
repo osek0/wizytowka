@@ -145,6 +145,7 @@ a{
 #daneKontaktowe .content{
     display: grid;
     grid-template-columns: auto 1fr;
+    text-align: initial;
 }
 .kontakt-item{
     margin: 5px 20px;
@@ -161,20 +162,122 @@ a{
     grid-template-rows: auto;
 }
 .icon{
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .map{
     float: left;
 }
-
 .text p{
-    margin: 5px 0 12px;
+    margin: 4px 0 12px;
 }
 .kontakt-item i{
     font-size: 25px;
 }
 .kontakt-item a{
     color:black;
+}
+.kontakt-item:last-child{
+    border: none;
+}
+.sliders{
+    margin-bottom: 2vh;
+    width: 99vw;
+    height: 128px;
+    overflow: hidden;
+    position: relative;
+}
+.img-slider{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0px;
+    transition: all ease-in-out 500ms;
+    -webkit-transition: all ease-in-out 500ms;
+    -ms-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
+    background-repeat: no-repeat;
+}
+#img-slider1 {
+    background-image: url(icons/1-140530150433N3.png);
+}
+#img-slider2 {
+    background-image: url(icons/12_logo.png);
+}
+#img-slider3 {
+    background-image: url(icons/18_logo.png);
+}
+#img-slider4 {
+    background-image: url(icons/3dd423009d30fbb1897d1ee876b28264.png);
+}
+#img-slider5 {
+    background-image: url(icons/511271.gif);
+}
+#img-slider6 {
+    background-image: url(icons/51_logo.png);
+}
+#img-slider7 {
+    background-image: url(icons/56_logo.png);
+}
+#img-slider8 {
+    background-image: url(icons/805854.png);
+}
+#img-slider9 {
+    background-image: url(icons/805861.png);
+}
+#img-slider10 {
+    background-image: url(icons/950028c68d92185270fab74a91e9b443.png);
+}
+#img-slider11 {
+    background-image: url(icons/98_logo.png);
+}
+#img-slider12 {
+    background-image: url(icons/BMW.png);
+}
+#img-slider13 {
+    background-image: url(icons/Bentley-Logo.png);
+}
+#img-slider14 {
+    background-image: url(icons/Tesla_logo-128.png);
+}
+#img-slider15 {
+    background-image: url(icons/alfa_romeo_logo_mini.jpg);
+}
+#img-slider16 {
+    background-image: url(icons/honda.png);
+}
+#img-slider17 {
+    background-image: url(icons/jaguar.png);
+}
+#img-slider18 {
+    background-image: url(icons/merc-logo.png);
+}
+#img-slider19 {
+    background-image: url(icons/mini.png);
+}
+#img-slider20 {
+    background-image: url(icons/seat.png);
+}
+#img-slider21 {
+    background-image: url(icons/skoda.png);
+}
+#img-slider22 {
+    background-image: url(icons/toyota.png);
+}
+.img-button{
+    position: absolute;
+    top: 44px;
+    z-index: 10;
+    opacity: 0.7;
+    cursor: pointer;
+}
+#img-button-next{
+    right:5px;
+}
+#img-button-prev{
+    left: 10px;
+}
+.img-button i{
+    font-size: 40px;
 }
 .bigTitle{
     font-family: 'Lobster', cursive;

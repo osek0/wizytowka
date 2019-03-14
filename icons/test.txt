@@ -1,0 +1,14 @@
+ if(bannerStatus === 1) {
+        document.getElementById("img-slider3").style.opacity = "0";
+        setTimeout(function() {
+            document.getElementById("img-slider1").style.right = "-512px";
+            document.getElementById("img-slider1").style.zIndex = "2";
+            document.getElementById("img-slider2").style.right = "-256px";
+            document.getElementById("img-slider2").style.zIndex = "3";
+            document.getElementById("img-slider3").style.right = "0px";
+            document.getElementById("img-slider3").style.zIndex = "1";
+        }, 500);
+        setTimeout(function() {
+        document.getElementById("img-slider3").style.opacity = "1";
+        }, 1000);
+        bannerStatus = 2;
