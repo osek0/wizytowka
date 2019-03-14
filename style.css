@@ -51,7 +51,7 @@ footer{
 }
 #navBar{
     display: grid;
-    grid-template-columns: 2fr repeat(4, 1fr);
+    grid-template-columns: 2fr repeat(5, 1fr);
     background: rgba(56, 56, 56, 0.24);
     height: 5vh;
     width: 100%;
@@ -142,7 +142,48 @@ a{
     text-decoration: none;
     color: whitesmoke;
 }
+#daneKontaktowe .content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.kontakt-item{
+    margin: 5px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-bottom: 1px groove rgba(0,0,0,0.32);
+}
+.kontakt-data
+{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+.kontakt-item:nth-child(1), .kontakt-item:nth-child(2){
+    grid-template-rows: auto;
+}
+.icon{
+    margin-right: 5px;
+}
+.map{
+    float: left;
+}
+
+.text p{
+    margin: 5px 0 12px;
+}
+.kontakt-item i{
+    font-size: 25px;
+}
+.kontakt-item a{
+    color:black;
+}
 .bigTitle{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+.bigTitle h2{
+    margin-bottom:0;
+}
+.small-title{
     font-family: 'Lobster', cursive;
 }
 .sticky {
