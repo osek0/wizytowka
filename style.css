@@ -12,7 +12,7 @@ body{
 }
 footer{
     background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
-    background-position: center center, bottom left;
+    background-position: center center, bottom right;
     background-attachment: scroll, fixed; 
     background-size: cover;
     display: grid;
@@ -33,7 +33,7 @@ footer{
     flex-direction: column;
     align-items: center;
     background: url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg") no-repeat left bottom fixed;
-    background-size: 100vw;
+    background-size: cover;
     text-shadow:
    -1px -1px 0 #000,  
     1px -1px 0 #000,
