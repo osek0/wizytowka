@@ -1,5 +1,7 @@
 let bannerStatus = 1;
 const bannerTimer = 4000;
+const numOfItems = 18;
+const picWidth = 128;
 
 window.onload = function() {
     bannerLoop();
@@ -19,30 +21,30 @@ document.getElementById("sliders").onmouseleave = function () {
     }, bannerTimer);
 }
 
-document.getElementById("img-button-next").onclick = function() {
+document.getElementById("img-button-prev").onclick = function() {
     if(bannerStatus > 3){
         bannerStatus -=3;
     }
     else{
-        bannerStatus = 22 - 3 + bannerStatus; 
+        bannerStatus = numOfItems - 3 + bannerStatus; 
     }
     bannerLoopRev();
-    if(bannerStatus < 20){
+    if(bannerStatus < numOfItems-2){
         bannerStatus +=3;
     }
     else{
-        bannerStatus = bannerStatus + 3 - 22;
+        bannerStatus = bannerStatus + 3 - numOfItems;
     }
 }
 
-document.getElementById("img-button-prev").onclick = function () {
+document.getElementById("img-button-next").onclick = function () {
     bannerLoop();
 }
 
 var j;
 
 function bannerLoop(){
-    for (var k = 0; k < 22; k++) {
+    for (var k = 0; k < numOfItems; k++) {
         if (bannerStatus === k + 1) {
             if(k === 0)
             {
@@ -52,20 +54,20 @@ function bannerLoop(){
                 document.getElementById(`img-slider1`).style.opacity = "1";
             }
             else{
-            document.getElementById(`img-slider${22 - k + 2}`).style.opacity = "1";
+            document.getElementById(`img-slider${numOfItems - k + 2}`).style.opacity = "1";
             }
-            j = -2560;
-            for (var i = 0; i < 22; i++) {
-                if (22 - k + i + 1 <= 22) {
-                    document.getElementById(`img-slider${22 - k + i + 1}`).style.right = `${j}px`;
+            j = (2 - numOfItems) * (picWidth+10);
+            for (var i = 0; i < numOfItems; i++) {
+                if (numOfItems - k + i + 1 <= numOfItems) {
+                    document.getElementById(`img-slider${numOfItems - k + i + 1}`).style.right = `${j}px`;
                 }
                 else {
                     document.getElementById(`img-slider${i - k + 1}`).style.right = `${j}px`;
                 }
-                j += 128;
+                j += picWidth+10;
             }
-                document.getElementById(`img-slider${22 - k}`).style.opacity = "0";
-            if (k + 2 <= 22) {
+                document.getElementById(`img-slider${numOfItems - k}`).style.opacity = "0";
+            if (k + 2 <= numOfItems) {
                 bannerStatus = k + 2;
             }
             else {
@@ -76,38 +78,38 @@ function bannerLoop(){
     }
 }
 function bannerLoopRev() {
-    for (var k = 22; k > 0; k--) {
+    for (var k = numOfItems; k > 0; k--) {
         if (bannerStatus === k) {
-            if (k === 22) {
-                document.getElementById(`img-slider21`).style.opacity = "1";
+            if (k === numOfItems) {
+                document.getElementById(`img-slider${numOfItems-1}`).style.opacity = "1";
             } 
-            else if (k === 21) {
-                document.getElementById(`img-slider22`).style.opacity = "1";
+            else if (k === numOfItems-1) {
+                document.getElementById(`img-slider${numOfItems}`).style.opacity = "1";
             }
             else {
-                document.getElementById(`img-slider${22-1-k}`).style.opacity = "1";
+                document.getElementById(`img-slider${numOfItems-1-k}`).style.opacity = "1";
             }
-            j = -2560;
-            for (var i = 0; i <22; i++) {
-                if (22 - k + i + 1 <= 22) {
-                    document.getElementById(`img-slider${22 - k + i + 1}`).style.right = `${j}px`;
+            j = (2-numOfItems)*(picWidth+10);
+            for (var i = 0; i <numOfItems; i++) {
+                if (numOfItems - k + i + 1 <= numOfItems) {
+                    document.getElementById(`img-slider${numOfItems - k + i + 1}`).style.right = `${j}px`;
                 }
                 else {
                     document.getElementById(`img-slider${i - k + 1}`).style.right = `${j}px`;
                 }
-                j += 128;
+                j += picWidth+10;
             }
-            if (k === 22) {
+            if (k === numOfItems) {
                 document.getElementById(`img-slider2`).style.opacity = "0";
             }
-            else if(k === 21){
+            else if(k === numOfItems-1){
                 document.getElementById(`img-slider1`).style.opacity = "0";
             }
             else {
-                document.getElementById(`img-slider${22-k+1}`).style.opacity = "0";
+                document.getElementById(`img-slider${numOfItems-k+1}`).style.opacity = "0";
             }
             if (k === 1) {
-                bannerStatus = 22;
+                bannerStatus = numOfItems;
             }
             else {
                 bannerStatus = k-1;

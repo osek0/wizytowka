@@ -11,10 +11,7 @@ body{
     scroll-behavior: smooth;
 }
 footer{
-    background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
-    background-position: center center, bottom right;
-    background-attachment: scroll, fixed; 
-    background-size: cover;
+    background-color: rgb(27, 27, 27);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 20px, 30px;
@@ -77,7 +74,7 @@ footer{
     align-items: center;
     justify-items: center;
 }
-#naszaOferta, #katalogi{
+#naszaOferta, #katalogi, #daneKontaktowe{
     color: whitesmoke;
     background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.568) 0, rgba(27, 27, 27, 0.932) 100%), url("https://heritagepointeofhuntington.org/wp-content/uploads/503421060.jpg");
     background-position: center center, bottom left;
@@ -115,7 +112,7 @@ footer{
     font-size: 20px;
     font-family: 'Lobster', cursive;
 }
-.download{
+/* .download{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -134,7 +131,7 @@ footer{
 }
 .download-item i{
     margin-right: 10px;
-}
+} */
 .produkt:hover, .download-item:hover{
     background-color: var(--grey-three);
     transition: background-color 0.5s ease-in ;
@@ -175,7 +172,7 @@ a{
     font-size: 25px;
 }
 .kontakt-item a{
-    color:black;
+    color:whitesmoke;
 }
 .kontakt-item:last-child{
     border: none;
@@ -190,6 +187,7 @@ a{
 .img-slider{
     height: 100%;
     width: 100%;
+    padding: 0 5px;
     position:absolute;
     top: 0px;
     transition: all ease-in-out 500ms;
@@ -199,70 +197,58 @@ a{
     background-repeat: no-repeat;
 }
 #img-slider1 {
-    background-image: url(icons/1-140530150433N3.png);
+    background-image: url(icons/asco.png);
 }
 #img-slider2 {
-    background-image: url(icons/12_logo.png);
+    background-image: url(icons/bmw.png);
 }
 #img-slider3 {
-    background-image: url(icons/18_logo.png);
+    background-image: url(icons/Browar.png);
 }
 #img-slider4 {
-    background-image: url(icons/3dd423009d30fbb1897d1ee876b28264.png);
+    background-image: url(icons/ceramika.png);
 }
 #img-slider5 {
-    background-image: url(icons/511271.gif);
+    background-image: url(icons/ckm.png);
 }
 #img-slider6 {
-    background-image: url(icons/51_logo.png);
+    background-image: url(icons/galtex.png);
 }
 #img-slider7 {
-    background-image: url(icons/56_logo.png);
+    background-image: url(icons/koksownia.png);
 }
 #img-slider8 {
-    background-image: url(icons/805854.png);
+    background-image: url(icons/Kutek.png);
 }
 #img-slider9 {
-    background-image: url(icons/805861.png);
+    background-image: url(icons/MiodyPolskie.png);
 }
 #img-slider10 {
-    background-image: url(icons/950028c68d92185270fab74a91e9b443.png);
+    background-image: url(icons/niedziela.png);
 }
 #img-slider11 {
-    background-image: url(icons/98_logo.png);
+    background-image: url(icons/nowodvorski.png);
 }
 #img-slider12 {
-    background-image: url(icons/BMW.png);
+    background-image: url(icons/osiecznica.png);
 }
 #img-slider13 {
-    background-image: url(icons/Bentley-Logo.png);
+    background-image: url(icons/politechnika.png);
 }
 #img-slider14 {
-    background-image: url(icons/Tesla_logo-128.png);
+    background-image: url(icons/powiat-czst.png);
 }
 #img-slider15 {
-    background-image: url(icons/alfa_romeo_logo_mini.jpg);
+    background-image: url(icons/rakow.png);
 }
 #img-slider16 {
-    background-image: url(icons/honda.png);
+    background-image: url(icons/skra.png);
 }
 #img-slider17 {
-    background-image: url(icons/jaguar.png);
+    background-image: url(icons/unnamed.png);
 }
 #img-slider18 {
-    background-image: url(icons/merc-logo.png);
-}
-#img-slider19 {
-    background-image: url(icons/mini.png);
-}
-#img-slider20 {
-    background-image: url(icons/seat.png);
-}
-#img-slider21 {
-    background-image: url(icons/skoda.png);
-}
-#img-slider22 {
-    background-image: url(icons/toyota.png);
+    background-image: url(icons/wisan.png);
 }
 .img-button{
     position: absolute;
