@@ -44,11 +44,12 @@ footer{
     margin-bottom: 0;
 }
 .titleBar p{
-    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
 }
 #navBar{
     display: grid;
-    grid-template-columns: 2fr repeat(5, 1fr);
+    grid-template-columns: 2fr repeat(4, 1fr);
     background: rgba(56, 56, 56, 0.24);
     height: 5vh;
     width: 100%;
@@ -143,7 +144,7 @@ a{
 #daneKontaktowe .content{
     display: grid;
     grid-template-columns: auto 1fr;
-    text-align: initial;
+    /* text-align: initial; */
 }
 .kontakt-item{
     margin: 5px 20px;
@@ -195,6 +196,7 @@ a{
     -ms-transition: all ease-in-out 500ms;
     -o-transition: all ease-in-out 500ms;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 #img-slider1 {
     background-image: url(icons/asco.png);
@@ -258,7 +260,7 @@ a{
     cursor: pointer;
 }
 #img-button-next{
-    right:5px;
+    right:10px;
 }
 #img-button-prev{
     left: 10px;
@@ -283,4 +285,75 @@ a{
 }
 .sticky + .container {
   padding-top: 50px;
+}
+@media screen and (max-width: 900px){
+    .titleBar h1 {
+        font-size: 200px;
+    }
+    .titleBar p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px){
+    .titleBar h1 {
+        font-size: 150px;
+    }
+    .titleBar p {
+        font-size: 25px;
+    }
+    #daneKontaktowe .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .kontakt-data {
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 14px;
+    }
+    .kontakt-data .kontakt-item:nth-child(3){
+        border-bottom: none;
+    }
+    .produkt {
+        font-size: 80px;
+    }
+    .produkt p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 765px){
+    #daneKontaktowe .content{
+        padding: 0 0 2vh 0;
+    }
+} 
+@media screen and (max-width: 465px){
+    .titleBar h1 {
+        font-size: 120px;
+    }
+    .titleBar p {
+        font-size: 20px;
+    }
+     .produkt {
+        font-size: 70px;
+    }
+    .produkt p {
+        font-size: 14px;
+    }
+    #navBar{
+        font-size: 14px;
+    }
+    #navBar .item:first-child{
+        font-size: 25px;
+
+    }
+}
+@media screen and (max-width: 375px){
+    .titleBar h1 {
+        font-size: 100px;
+    }
+    .titleBar p {
+        font-size: 16px;
+    }
+    .produkt p {
+        font-size: 11px;
+    }
 }
